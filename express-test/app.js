@@ -13,12 +13,18 @@ var app = express();
 //with a path ('/') relative to the site root. The callback function 
 //takes a request and a response object as arguments, and simply
 //calls send() on the response to return the string "Hello World!"
+
+//There are a number of other response methods for ending the 
+//request/response cycle, for example you could call res.json() 
+//to send a JSON response or res.sendFile() to send a file.
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
-
-
+app.all('/secret', function (req, res, next) {
+    console.log('Accessing the secret section ...');
+    next(); // pass control to the next handler
+});
 
 exports.area = function (width) { return width * width; };
 exports.perimeter = function (width) { return 4 * width; };
