@@ -18,6 +18,30 @@ app.get('/', function (req, res) {
 });
 
 
+
+
+exports.area = function (width) { return width * width; };
+exports.perimeter = function (width) { return 4 * width; };
+
+var square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
+console.log('The area of a square with a width of 4 is ' + square.area(4));
+
+
+//If you want to export a complete object in one assignment instead of 
+//building it one property at a time, assign it to module.exports as 
+//shown below (you can also do this to make the root of the exports
+//object a constructor or other function):
+
+module.exports = {
+    area: function (width) {
+        return width * width;
+    },
+
+    perimeter: function (width) {
+        return 4 * width;
+    }
+};
+
 //The final block starts up the server on port '3000' and prints a log
 //comment to the console. With the server running, you could go to 
 //localhost:3000 in your browser to see the example response returned.
