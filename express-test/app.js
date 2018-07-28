@@ -46,6 +46,18 @@ module.exports = {
 //comment to the console. With the server running, you could go to 
 //localhost:3000 in your browser to see the example response returned.
 
+//synchronous API calls
+console.log('First');
+console.log('Second');
+
+//asynchronous API calls 
+setTimeout(function () {
+    console.log('First');
+}, 3000);
+console.log('Second');
+
+
+
 app.listen(3003, function () {
     console.log('Example app listening on port 3000!');
 });
