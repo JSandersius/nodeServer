@@ -1,14 +1,7 @@
-//to do list for simple node server 
-
-
-
-
-
-
 //Load Http module 
 
 //create HTTP server and  listen on port 300 for requests 
 
 //set the response HTTP header with HTTP status and Content type 
 
-//listen for request on port 3000, and as a callback function have the port location on logged
+//listen for request on port 3000, and as a callback function have the port location on logged 
