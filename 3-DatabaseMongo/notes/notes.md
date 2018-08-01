@@ -39,5 +39,12 @@ Prizes/Awards? Pullitzer by book or author
 
 _________//OR
 
+To install a mongoDB server go to 
+MondoDB Download Center 
+and install locally 
+https://www.mongodb.com/download-center#atlas
 
+______________//
+for this, we're going to use the free mLab sandbox
+https://mlab.com/plans/pricing/
 
