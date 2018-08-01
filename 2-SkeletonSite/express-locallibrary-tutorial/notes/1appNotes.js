@@ -1,17 +1,23 @@
 //APP.JS
 
-//This file creates an express application object(named app, by convention), sets up the application with various settings and middleware, and then exports the app from the module.The code below shows just the parts of the file that create and export the app object:
-
+//This file creates an express application object(named app, by convention), 
+//sets up the application with various settings and middleware, 
+//and then exports the app from the module.
+//The code below shows just the parts of the file that create and export the app object:
 var express = require('express');
 var app = express();
 ...
 module.exports = app;
 
-//Back in the www entry point file above, it is this module.exports object that is supplied to the caller when this file is imported.
-
-//Lets work through the app.js file in detail.First we import some useful node libraries into the file using require(), including express, serve - favicon, morgan, cookie - parser and body - parser that we previously downloaded for our application using NPM; and path, which is a core Node library for parsing file and directory paths.
 
 
+//Back in the www entry point file above, 
+//it is this module.exports object that is supplied to the caller when this file is imported.
+//Lets work through the app.js file in detail.
+//First we import some useful node libraries into the file using require(), 
+//     including express, serve - favicon, morgan, cookie - parser and body - parser 
+//        that we previously downloaded for our application using NPM; and path, 
+//            which is a core Node library for parsing file and directory paths.
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -19,22 +25,35 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-//Then we require() modules from our routes directory. These modules/files contain code for handling particular sets of related "routes" (URL paths). When we extend the skeleton application, for example to list all books in the library, we will add a new file for dealing with book-related routes.
 
+//Then we require() modules from our routes directory.
+//These modules/files contain code for handling particular sets of related "routes" (URL paths). 
+//When we extend the skeleton application, for example to list all books in the library,
+//   we will add a new file for dealing with book-related routes.
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-//At this point we have just imported the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
 
-//Next we create the app object using our imported express module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First we set the 'views' value to specify the folder where the templates will be stored (in this case the sub folder /views). Then we set the 'view engine' value to specify the template library (in this case "pug").
-
+//At this point we have just imported the module; 
+//we haven't actually used its routes yet (this happens just a little bit further down the file).
+//Next we create the app object using our imported express module, 
+//  and then use it to set up the view (template) engine. 
+//There are two parts to setting up the engine. 
+//First we set the 'views' value to specify the folder where the templates will be stored 
+//   (in this case the sub folder /views). 
+//Then we set the 'view engine' value to specify the template library (in this case "pug").
 var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-//The next set of functions call app.use() to add the middleware libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the express.static middleware to get Express to serve all the static files in the /public directory in the project root.
+
+//The next set of functions call app.use() to add the middleware libraries into the request handling chain. 
+//In addition to the 3rd party libraries we imported previously, 
+//  we use the express.static middleware to get Express to serve all 
+//     the static files in the /public directory in the project root.
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -45,18 +64,18 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-//Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different parts of the site:
-
-
+//Now that all the other middleware is set up,
+// we add our (previously imported) route-handling code to the request handling chain. 
+//The imported code will define particular routes for the different parts of the site:
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-//Note: The paths specified above ('/' and '/users') are treated as a prefix to routes defined in the imported files. So for example if the imported users module defines a route for /profile, you would access that route at /users/profile. We'll talk more about routes in a later article.
-
+//Note: The paths specified above ('/' and '/users') are treated as a prefix to 
+//  routes defined in the imported files. So for example if the imported users module defines a 
+//    route for /profile, you would access that route at /users/profile. 
+//        We'll talk more about routes in a later article.
 
 //The last middleware in the file adds handler methods for errors and HTTP 404 responses.
-
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
@@ -75,7 +94,9 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-//The Express application object (app) is now fully configured. The last step is to add it to the module exports (this is what allows it to be imported by /bin/www).
+//The Express application object (app) is now fully configured. 
+//The last step is to add it to the module exports 
+//  (this is what allows it to be imported by /bin/www).
 
 module.exports = app;
 
