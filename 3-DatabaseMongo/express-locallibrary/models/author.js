@@ -17,3 +17,13 @@ AuthorSchema
     .get(function () {
         return this.family_name + ', ' + this.first_name;
     });
+
+//Virtual for authors URL
+AuthorSchema
+    .virtual('url')
+    .get(function () {
+        return '/catalog/author' + this._id;
+    });
+
+//Export Model
+module.exports = mongoose.model('Author', AuthorSchema);
