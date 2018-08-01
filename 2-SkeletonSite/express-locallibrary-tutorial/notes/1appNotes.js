@@ -6,9 +6,8 @@
 //The code below shows just the parts of the file that create and export the app object:
 var express = require('express');
 var app = express();
-...
-module.exports = app;
-
+//rest of the application..
+module.exports = app; //fin
 
 
 //Back in the www entry point file above, 
