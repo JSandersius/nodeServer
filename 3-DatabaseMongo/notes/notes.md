@@ -29,5 +29,15 @@ https://www.mongodb.com/what-is-mongodb
 
 This ODM and database combination is extremely popular in the Node community, partially because the document storage and query system looks very much like JSON, and is hence familiar to JavaScript developers.
 
+Data model--> Books
+
+Name
+Author
+Genre
+Date of Publication 
+Prizes/Awards? Pullitzer by book or author 
+
+_________//OR
+
 
 
