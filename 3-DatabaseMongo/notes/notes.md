@@ -15,3 +15,19 @@ Approaches to interating with database..
 .Using and Object Data Model("ODM")/Object Relational Model ("ORM"). An ODM/ORM represents the websites data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend. 
 
 
+Tip:  Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.
+
+Mongoose is most popular ORM as of right now
+ 
+we're going to use the Mongoose ODM to access our data 
+https://www.npmjs.com/package/mongoose
+
+Mongoose acts as a front end to mongoDB 
+https://www.mongodb.com/what-is-mongodb
+
+..uses a document-oriented data model. A “collection” of “documents”, in a MongoDB database, is analogous to a “table” of “rows” in a relational database.
+
+This ODM and database combination is extremely popular in the Node community, partially because the document storage and query system looks very much like JSON, and is hence familiar to JavaScript developers.
+
+
+
