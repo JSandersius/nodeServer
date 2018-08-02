@@ -4,12 +4,14 @@ var Schema = mongoose.Schema;
 
 var GenreSchema = new Schema(
     {
-        name: 
+        catagory of book 
+     fiction - non fiction
+     romance / military history etc.
+
+            name:
+
     }
-)
-
-
-
+);
 
 
 
