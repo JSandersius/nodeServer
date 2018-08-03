@@ -4,6 +4,9 @@ var Schema = mongoose.Schema;
 
 var GenreSchema = new Schema(
     {
+        category: { type: String, require: true, max: 100 },
+
+
         catagory of book 
      fiction - non fiction
      romance / military history etc.
@@ -12,9 +15,6 @@ var GenreSchema = new Schema(
 
     }
 );
-
-
-
 
 
 //Open your ./models/genre.js file and create a schema for storing genres 
