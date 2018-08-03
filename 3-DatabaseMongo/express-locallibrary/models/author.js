@@ -2,6 +2,9 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
+//this scheme defines an author as having String SchemaTypes
+//for the first and family names, that are required and have a maximum of 100 characters,
+//and Date fields for the date of birth and death
 var AuthorSchema = new Schema(
     {
         first_name: { type: String, require: true, max: 100 },
