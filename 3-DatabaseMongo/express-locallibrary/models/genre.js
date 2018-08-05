@@ -9,7 +9,7 @@ var GenreSchema = new Schema(
     }
 );
 
-//Virtuial for genre's URL
+//Virual for genre's URL
 GenreSchema
     .virtual('url')
     .get(function () {
