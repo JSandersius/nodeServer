@@ -1,13 +1,14 @@
+
+
+
+
 var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var GenreSchema = new Schema(
-    {
-        name: { type: String, require: true, min: 3, max: 100 },
-        fiction: { type: String, require: true, enum: ['Fiction', "Non-Fiction"], default: "n/a" }
-    }
-);
+var GenreSchema = new Schema({
+    name: { type: String, require: true, min: 3, max: 100 }
+});
 
 //Virual for genre's URL
 GenreSchema
