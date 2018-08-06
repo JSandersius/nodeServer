@@ -10,6 +10,7 @@ This is a CRUD app homie
 We gon' be all kindsa creatin', readin', updatin' and deletin' up in hur.
 
 ________________//
+
 Approaches to interating with database.. 
 
 .using a datbases native query language(e.g.SQL)
