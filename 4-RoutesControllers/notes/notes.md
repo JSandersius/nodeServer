@@ -15,3 +15,12 @@ As we've already created the models, the main things we'll need to create are:
 
 ______________//
 Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.
+
+The first section below provides a brief "primer" on how to use the Express Router middleware.
+http://expressjs.com/en/4x/api.html#router
+ We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.
+
+______________//
+ A route is a section of Express code that associates an HTTP verb (GET, POST, PUT, DELETE, etc.), an URL path/pattern, and a function that is called to handle that pattern.
+
+There are several ways to create routes. For this tutorial we're going to use the express.Router middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.
