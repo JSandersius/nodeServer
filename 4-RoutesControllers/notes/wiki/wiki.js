@@ -17,4 +17,7 @@ router.get('/about', function (req, res) {
     res.send('About this wiki');
 })
 
-module.exports = router; 
+module.exports = router;
+
+//Note: Above we are defining our route handler callbacks directly in the router functions.
+//In the LocalLibrary we'll define these callbacks in a separate controller module.
