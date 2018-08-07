@@ -1,3 +1,4 @@
+//requires the model that we'll later be using to access and update our data. 
 var Author = require('../models/author');
 
 // Display list of all Authors.
