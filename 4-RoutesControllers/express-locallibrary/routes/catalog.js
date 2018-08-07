@@ -7,7 +7,6 @@
 
 //The handler functions are all imported from the controller modules we created in the previous section.
 
-
 var express = require('express');
 var router = express.Router();
 
