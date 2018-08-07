@@ -44,3 +44,28 @@ value (e.g. /catalog/book/584493c1f4887f06c0e67d37/update).
 
 .catalog/<object>/<id>/delete — The form to delete a specific book, bookinstance, genre, author with the given _id field value (e.g. /catalog/book/584493c1f4887f06c0e67d37/delete).
 
+
+______________________//
+
+Create the Route-handler callback functions
+
+/express-locallibrary-tutorial  //the project root
+  /controllers
+    authorController.js
+    bookController.js
+    bookinstanceController.js
+    genreController.js
+    
+    
+
+______________________//
+Now to create the catalog route module
+
+
+/express-locallibrary-tutorial //the project root
+  /routes
+    index.js
+    users.js
+    catalog.js
+
+    
