@@ -5,9 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var async = require("async");
 var lodash = require('lodash');
+var nodenom = require('nodemon')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
+var nodenom = require('.')
 
 var app = express();
 
