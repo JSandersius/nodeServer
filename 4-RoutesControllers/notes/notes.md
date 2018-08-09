@@ -67,5 +67,12 @@ Now to create the catalog route module
     index.js
     users.js
     catalog.js
+  
+
+  _________________________//
+
+  That's is, We should noe have routes and skeleton functions enabled for all the URLs that we will eventually support on the LocalLibrary site
+
+  
 
     
