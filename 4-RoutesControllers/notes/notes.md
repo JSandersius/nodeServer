@@ -73,6 +73,21 @@ Now to create the catalog route module
 
   That's is, We should noe have routes and skeleton functions enabled for all the URLs that we will eventually support on the LocalLibrary site
 
-  
+npm start 
+npm devstart
+
+
+__________//
+
+Links to page once running, check it out. 
+
+http://localhost:3000/
+http://localhost:3000/catalog
+http://localhost:3000/catalog/books
+http://localhost:3000/catalog/bookinstances/
+http://localhost:3000/catalog/authors/
+http://localhost:3000/catalog/genres/
+http://localhost:3000/catalog/book/5846437593935e2f8c2aa226
+http://localhost:3000/catalog/book/create
 
     
