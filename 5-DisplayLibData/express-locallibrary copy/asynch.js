@@ -37,6 +37,7 @@ async.series({
 );
 
 //_______________
+//Passed as an array 
 
 async.series([
     function (callback) {
