@@ -119,6 +119,11 @@ __________________//
 The following subarticles go through the process of adding the different features required for us to display the required website pages. You need to read and work through each one of these in turn, before moving on to the next one.
 
 
+
+
+
+
+ npm async
 _______________//
 (1) Asynchronous flow control using async
   async.parallel() to execute any operations that must be performed in parallel.
@@ -129,7 +134,7 @@ _______________//
 
 
 
-
+npm pug (was jade)
 _______________//
 (2) Template primer
 
