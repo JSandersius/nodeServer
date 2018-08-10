@@ -119,7 +119,7 @@ __________________//
 The following subarticles go through the process of adding the different features required for us to display the required website pages. You need to read and work through each one of these in turn, before moving on to the next one.
 
 
-
+_______________//
 (1) Asynchronous flow control using async
   async.parallel() to execute any operations that must be performed in parallel.
 
@@ -127,14 +127,42 @@ The following subarticles go through the process of adding the different feature
 
   async.waterfall() for operations that must be run in series, with each operation depending on the results of preceding operations.
 
-2 Template primer
-3 The LocalLibrary base template
-4 Home page
-5 Book list page
-6 BookInstance list page
-7 Date formatting using moment
-8 Author list page and Genre list page challenge
-9 Genre detail page
-10 Book detail page
-11 Author detail page
-12 BookInstance detail page and challenge
+
+
+
+_______________//
+(2) Template primer
+
+A template is a text file defining the structure or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in Express, templates are referred to as views).
+
+ The result is a page definition that translates directly to HTML, but is arguably more concise and easier to read. 
+
+_______________//
+(3) The LocalLibrary base template
+
+_______________//
+(4) Home page
+
+_______________//
+(5) Book list page
+
+_______________//
+(6) BookInstance list page
+
+_______________//
+(7) Date formatting using moment
+
+_______________//
+(8) Author list page and Genre list page challenge
+
+_______________//
+(9) Genre detail page
+
+_______________//
+(10) Book detail page
+
+_______________//
+(11) Author detail page
+
+_______________//
+(12) BookInstance detail page and challenge
