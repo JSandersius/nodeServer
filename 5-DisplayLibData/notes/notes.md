@@ -120,7 +120,13 @@ The following subarticles go through the process of adding the different feature
 
 
 
-1 Asynchronous flow control using async
+(1) Asynchronous flow control using async
+  async.parallel() to execute any operations that must be performed in parallel.
+
+  async.series() for when we need to ensure that asynchronous operations are performed in series.
+
+  async.waterfall() for operations that must be run in series, with each operation depending on the results of preceding operations.
+
 2 Template primer
 3 The LocalLibrary base template
 4 Home page
