@@ -135,6 +135,7 @@ _______________//
 
 
 npm pug (was jade)
+pug docs https://pugjs.org/api/getting-started.html
 _______________//
 (2) Template primer
 
@@ -144,6 +145,8 @@ A template is a text file defining the structure or layout of an output file, wi
 
 _______________//
 (3) The LocalLibrary base template
+
+Open /views/layout.pug and replace the content with the code below..
 
 _______________//
 (4) Home page
