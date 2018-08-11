@@ -1,16 +1,16 @@
 //(this follows an identical pattern to the Author and BookInstance files):
-
+var Book = require('../models/book');
+var async = require('async');
 var Genre = require('../models/genre');
 
-
-
-// // Display list of all Genre.
+// Display list of all Genre.
 exports.genre_list = function (req, res) {
     res.send('NOT IMPLEMENTED: Genre list');
 };
 
 // Display detail page for a specific Genre.
 
+// Display detail page for a specific Genre.
 exports.genre_detail = function (req, res, next) {
 
     async.parallel({
@@ -37,7 +37,7 @@ exports.genre_detail = function (req, res, next) {
 
 };
 
-//Old code
+//Old code 
 // exports.genre_detail = function (req, res) {
 //     res.send('NOT IMPLEMENTED: Genre detail: ' + req.params.id);
 // };
