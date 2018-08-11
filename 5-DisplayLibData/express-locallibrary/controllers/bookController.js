@@ -4,8 +4,6 @@
 //information from our models and then render it using
 //a template (view).
 
-// var Book = require('../models/book');
-
 // exports.index = function (req, res) {
 //     res.send('NOT IMPLEMENTED: Site Home Page');
 // };
