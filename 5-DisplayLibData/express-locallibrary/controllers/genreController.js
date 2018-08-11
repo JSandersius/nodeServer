@@ -1,13 +1,16 @@
 //(this follows an identical pattern to the Author and BookInstance files):
-
+var mongoose = require('mongoose');
 var Book = require('../models/book');
 var async = require('async');
 var Genre = require('../models/genre');
 
 
 // // Display list of all Genre.
-exports.genre_list = function (req, res) {
-    res.send('NOT IMPLEMENTED: Genre list');
+exports.genre_detail = function (req, res, next) {
+    var id = mongoose.Types.ObjectId(req.params.id);
+    // Old code
+    // exports.genre_list = function (req, res) {
+    //     res.send('NOT IMPLEMENTED: Genre list');
 };
 
 // Display detail page for a specific Genre.
