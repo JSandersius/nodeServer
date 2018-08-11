@@ -1,20 +1,20 @@
 //(this follows an identical pattern to the Author and BookInstance files):
+var Genre = require('../models/genre');
 var Book = require('../models/book');
 var async = require('async');
-var Genre = require('../models/genre');
+
 
 // Display list of all Genre.
-exports.genre_list = function (req, res) {
-    res.send('NOT IMPLEMENTED: Genre list');
+exports.genre_list = function (req, res, next) {
+    res.send('NOT IMPLEMENTED LLAMA: Genre list');
 };
-
-// Display detail page for a specific Genre.
 
 // Display detail page for a specific Genre.
 exports.genre_detail = function (req, res, next) {
 
     async.parallel({
         genre: function (callback) {
+
             Genre.findById(req.params.id)
                 .exec(callback);
         },
@@ -36,11 +36,6 @@ exports.genre_detail = function (req, res, next) {
     });
 
 };
-
-//Old code 
-// exports.genre_detail = function (req, res) {
-//     res.send('NOT IMPLEMENTED: Genre detail: ' + req.params.id);
-// };
 
 // Display Genre create form on GET.
 exports.genre_create_get = function (req, res) {
@@ -71,3 +66,12 @@ exports.genre_update_get = function (req, res) {
 exports.genre_update_post = function (req, res) {
     res.send('NOT IMPLEMENTED: Genre update POST');
 };
+
+
+
+
+// Display detail page for a specific Genre.
+//Old code 
+// exports.genre_detail = function (req, res) {
+//     res.send('NOT IMPLEMENTED: Genre detail: ' + req.params.id);
+// };
