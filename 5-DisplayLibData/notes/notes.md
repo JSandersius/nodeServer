@@ -175,8 +175,15 @@ _______________//
 
 Next we'll implement our list of all book copies (BookInstance) in the library. This page needs to include the title of the Book associated with each BookInstance (linked to its detail page) along with other information in the BookInstance model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the BookInstance detail page.
 
+
 _______________//
 (7) Date formatting using moment
+
+The default rendering of dates from our models is very ugly: Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time). In this section we'll show how you can update the BookInstance List page from the previous section to present the due_date field in a more friendly format: December 6th, 2016. 
+
+The approach we will use is to create a virtual property in our BookInstance model that returns the formatted date. We'll do the actual formatting using moment, a lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
+
+Note: It is possible to use moment to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the due_date currently. 
 
 _______________//
 (8) Author list page and Genre list page challenge
