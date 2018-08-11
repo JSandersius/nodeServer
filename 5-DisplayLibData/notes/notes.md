@@ -162,11 +162,18 @@ and Genre
 records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.
 
 OK, site is running and we have the landing page
+
 _______________//
 (5) Book list page
 
+Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
+
+
+
 _______________//
 (6) BookInstance list page
+
+Next we'll implement our list of all book copies (BookInstance) in the library. This page needs to include the title of the Book associated with each BookInstance (linked to its detail page) along with other information in the BookInstance model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the BookInstance detail page.
 
 _______________//
 (7) Date formatting using moment
