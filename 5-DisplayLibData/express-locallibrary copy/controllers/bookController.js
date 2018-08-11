@@ -1,15 +1,56 @@
 //This follows the same pattern as the other controller modules, 
 //but additionally has an index() function for displaying the site welcome page:
-
-var Book = require('../models/book');
-
 //It is this controller function that we extend to get 
 //information from our models and then render it using
 //a template (view).
 
+// var Book = require('../models/book');
+
+// exports.index = function (req, res) {
+//     res.send('NOT IMPLEMENTED: Site Home Page');
+// };
+
+//Replace all the code above with the following code 
+//fragment. The first thing this does is import
+//(require()) all the models (highlighted in bold). 
+//We need to do this because we'll be using them to 
+//get our counts of records. It then imports the async
+//module.
+
+var Book = require('../models/book');
+var Author = require('../models/author');
+var Genre = require('../models/genre');
+var BookInstance = require('../models/bookinstance');
+
+var async = require('async');
+
 exports.index = function (req, res) {
-    res.send('NOT IMPLEMENTED: Site Home Page');
+
+    // The async.parallel() method is passed an object 
+    //with functions for getting the counts for each of 
+    //our models
+
+    async.parallel({
+        book_count: function (callback) {
+            Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
+        },
+        book_instance_count: function (callback) {
+            BookInstance.countDocuments({}, callback);
+        },
+        book_instance_available_count: function (callback) {
+            BookInstance.countDocuments({ status: 'Available' }, callback);
+        },
+        author_count: function (callback) {
+            Author.countDocuments({}, callback);
+        },
+        genre_count: function (callback) {
+            Genre.countDocuments({}, callback);
+        },
+    }, function (err, results) {
+        res.render('index', { title: 'Local Library Home', error: err, data: results });
+    });
 };
+
 
 // Display list of all books.
 exports.book_list = function (req, res) {

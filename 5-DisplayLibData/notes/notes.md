@@ -152,6 +152,15 @@ _______________//
 this is accesible from ('/') or (catatlog/) root 
 This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.
 
+
+The index controller function needs to fetch information about how many 
+Book, 
+BookInstance, 
+available BookInstance, 
+Author, 
+and Genre 
+records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.
+
 _______________//
 (5) Book list page
 
