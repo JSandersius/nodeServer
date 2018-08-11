@@ -161,6 +161,7 @@ Author,
 and Genre 
 records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.
 
+OK, site is running and we have the landing page
 _______________//
 (5) Book list page
 
