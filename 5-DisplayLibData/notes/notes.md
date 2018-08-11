@@ -145,11 +145,12 @@ A template is a text file defining the structure or layout of an output file, wi
 
 _______________//
 (3) The LocalLibrary base template
-
 Open /views/layout.pug and replace the content with the code below..
 
 _______________//
 (4) Home page
+this is accesible from ('/') or (catatlog/) root 
+This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.
 
 _______________//
 (5) Book list page

@@ -3,6 +3,10 @@
 
 var Book = require('../models/book');
 
+//It is this controller function that we extend to get 
+//information from our models and then render it using
+//a template (view).
+
 exports.index = function (req, res) {
     res.send('NOT IMPLEMENTED: Site Home Page');
 };
