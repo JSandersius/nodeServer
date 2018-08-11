@@ -5,12 +5,6 @@ var async = require('async');
 var Genre = require('../models/genre');
 
 
-
-
-
-
-
-
 // // Display list of all Genre.
 exports.genre_list = function (req, res) {
     res.send('NOT IMPLEMENTED: Genre list');
@@ -43,9 +37,7 @@ exports.genre_detail = function (req, res, next) {
 
 };
 
-
-
-
+//Old code...
 // Display detail page for a specific Genre.
 // exports.genre_detail = function (req, res) {
 //     res.send('NOT IMPLEMENTED: Genre detail: ' + req.params.id);
