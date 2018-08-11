@@ -2,10 +2,17 @@
 
 var Genre = require('../models/genre');
 
-// Display list of all Genre.
-exports.genre_list = function (req, res) {
-    res.send('NOT IMPLEMENTED: Genre list');
-};
+
+
+
+
+
+
+
+// // Display list of all Genre.
+// exports.genre_list = function (req, res) {
+//     res.send('NOT IMPLEMENTED: Genre list');
+// };
 
 // Display detail page for a specific Genre.
 exports.genre_detail = function (req, res) {
